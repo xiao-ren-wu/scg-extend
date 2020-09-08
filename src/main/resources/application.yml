@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: user
+          uri: http://localhost:8083/user
+          predicates:
+            - Path=/user/**
+  main:
+    allow-bean-definition-overriding: true
